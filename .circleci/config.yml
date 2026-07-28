@@ -3,7 +3,7 @@ defaults: &defaults
   docker:
     - image: clojure:lein
 
-version: 2
+version: 2.1
 
 jobs:
   clj-kondo:
@@ -49,7 +49,6 @@ jobs:
       - run: lein deploy
 
 workflows:
-  version: 2
   test_and_publish:
     jobs:
       - clj-kondo:
